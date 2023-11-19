@@ -269,38 +269,162 @@ const roles = ["user", "admin", "manager", "superuser"];
 //  ---- Упражнение - Функция разбора URL
 // делаем URL парсер
 
-const myUrl = "https://purpleschool.ru/course/javascript";
-const myUr2 = "purpleschoolru/course/javascript";
+//const myUrl = "https://purpleschool.ru/course/javascript";
+//const myUr2 = "purpleschoolru/course/javascript";
 //мое решение
 //function myParserUrl (str){
-////  const colDot = myUrl.indexOf(":");
-////console.log(colDot);
+//  const colDot = myUrl.indexOf(":");
+//console.log(colDot);
 
-////const arrWithoutDot = myUrl.split(':').splice(0,1);
-////console.log(arrWithoutDot);
+//const arrWithoutDot = myUrl.split(':').splice(0,1);
+//console.log(arrWithoutDot);
 //   const newArr = myUrl.split('://');
+//   //console.log(myUrl);
 //   const proto = `${newArr.slice(0,1)}`;
+//   //console.log(newArr);
 //   const posOfdomain = `${newArr[1]}`;
+//   //console.log(posOfdomain );
 //   const newArr2 = posOfdomain.split('/');
+//   console.log(newArr2);
 //   const domain = `${newArr2.splice(0,1)}`;
+//   console.log(newArr2);
 //   const path = `/${newArr2.join("/")}`;
+//   console.log(newArr2);
 //   return [proto, domain, path]
 //}
-////myParserUrl(myUrl)
+//myParserUrl(myUrl)
 //const [proto, domain, path]= myParserUrl(myUrl);
-////console.log([proto, domain, path]);
+//console.log([proto, domain, path]);
 // ----- правильное решение задачи 
 
-function getUrlParts(url){
-   const [protocol, _, host, ...path] = url.split('/');
-   if (protocol === "https:" || protocol === "http:"){
-      if (!host.includes(".")){
-         return
-      }
-   console.log(protocol, _, host, path);
-   console.log(`Протокол : ${protocol.split(":")[0]}`);
-   console.log(`Домен : ${host}`);
-   console.log(`Путь : /${path.join("/")}`);
-}
-}
-getUrlParts(myUr2)
+//function getUrlParts(url){
+//   const [protocol, _, host, ...path] = url.split('/');
+//   if (protocol === "https:" || protocol === "http:"){
+//      if (!host.includes(".")){
+//         return
+//      }
+//   console.log(protocol, _, host, path);
+//   console.log(`Протокол : ${protocol.split(":")[0]}`);
+//   console.log(`Домен : ${host}`);
+//   console.log(`Путь : /${path.join("/")}`);
+//}
+//}
+//getUrlParts(myUr2)
+//Цикл for
+//for (let i=0; i<=10; i++){
+//console.log(`Наш баланс ${i}`);
+//}
+
+////----------Break и continue
+//const tasks = ["Задача 1", "Задача 2", "Задача 3"];
+//for (let i = 0; i<tasks.length; i++ ){
+//   if (tasks[i] === "Задача 2"){
+//      //при выполнении условия переходит на новый виток цикла
+//      continue;
+//   }
+
+//   console.log(tasks[i]);
+//}
+//console.log('-----------');
+//for (let j = 0; j<tasks.length; j++ ){
+//   if (tasks[j] === "Задача 2"){
+//      //прекращает выполнение цикла
+//      break;
+//   }
+
+//   console.log(tasks[j]);
+//}
+//--------- Упражнение перевернуть массив
+//const arr =["!", "JS", "люблю", "Я"];
+//let mass = [];
+//for (let i = arr.length - 1; i>=0; i--){
+//   mass.push(arr[i]);   
+//}
+//console.log(mass);
+//console.log(mass.join(" "));
+// -------- Цикл в цикле
+//for (let i = 1; i < 5; i++){
+//   console.log(`Цикл 1 - ${i} `);
+//   for(let j = 1; j < 5; j++){
+//      console.log(`Цикл 2 - ${j} `);
+//   }
+//}
+// Прример
+//const tasks = [[1,"Задача 1"], [2, "Задача 2"]];
+
+//for (let i = 0; i < tasks.length; i++){
+   
+//   for(let j = 0; j < tasks[i].length; j++){
+//      console.log(i,j);
+//      console.log(tasks[i][j]);
+//   }
+//}
+//------ while
+
+//for (let i = 1; i<=5; i++){
+//   console.log(`Вывод - ${i}`);
+//}
+//console.log(i);
+//let j=1;
+//while(j < 5){
+//   console.log(`Вывод while - ${j}`);
+//   j++;
+//}
+
+//const arr = [1,2,3,4,7];
+//for (let i = 0; i<=arr.length; i++){
+//   if (arr[i]>5){
+//      break;
+//   }
+//   //console.log(`Вывод - ${arr[i]}`);
+//}
+//let ar = 0;
+//while (arr[ar] <= 5 && ar < arr.length ){
+//   //console.log(arr[ar]);
+//   ar++;
+//}
+
+//// ----- do while
+
+//let j = 0;
+//do{
+//   console.log(arr[ar]);
+//   j++
+//} while(j < 0)
+
+//-----------Циклы for of и for in
+
+//const arr = [1,2,3,4,7];
+//for (let i = 0; i<=arr.length-1; i++){
+ 
+//   console.log(`Вывод - ${arr[i]}`);
+//}
+//// для получения конкретного элемента массива (проход оп всем элементам массива)
+////проход по элементам массива
+////двигается по значениям массива
+//for (let element of arr){
+//   console.log(element);
+//}
+//// проход по индексам массива 
+//for (let index in arr){
+//   console.log(index);
+//}
+//// для прохода по элементам сделаем следующее
+////двигаемся по индексам массива
+//for (let index in arr){
+//   console.log(arr[index]);
+//}
+//-----Упражнение раздел 9 -  баланс
+let balance = 100;
+const operations = [1000, -700, 300, -500, 10000];
+//функция расчтета итогого баланса
+ function totalBalance (elem1, elem2){
+   let sum = 0;
+   for(let i of elem2){
+      //console.log(i);
+      sum = sum + i;
+      //console.log(sum);
+   }
+   return sum;
+ }
+ console.log(totalBalance(balance, operations));
