@@ -59,4 +59,28 @@
 //}
 
 
+let arr = [2, 1, 1, 1, 4, 5, 78, 9, 1, 2, 2, 67];
 
+function uniq_fast(arr) {
+   var seen = [];
+   var out = [];
+   var len = arr.length;
+   var j = 0;
+   
+   for(var i = 0; i < len; i++) {
+        var item = arr[i];
+      
+        console.log(item);
+      console.log(seen[item]);
+        if(seen[item] !== 1) {
+         
+              seen[item] = 1;
+              out[j++] = item;
+        }
+   }
+   //console.log(out);
+   return out;
+}
+
+console.log(uniq_fast(arr));
+//uniq_fast(arr)
